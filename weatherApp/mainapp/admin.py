@@ -1,8 +1,13 @@
+"""
+Admin module for the Api user
+"""
+__author__ = 'Kalenshi Katebe'
+
 from django.contrib import admin
 from django.utils.translation import gettext as _
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from weather import models
+from . import models
 
 
 class UserAdmin(BaseUserAdmin):

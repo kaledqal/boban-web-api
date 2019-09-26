@@ -1,7 +1,5 @@
-from django.shortcuts import render
-import requests
-from weatherApp.api_call import get_weather_data
-from weather import serializers
+from .api_call import get_weather_data
+from .serializers import WeatherSerializer
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -10,7 +8,7 @@ from rest_framework.response import Response
 class WeatherAppView(APIView):
     """Describes how to Interact with the weather App"""
 
-    serializer_class = serializers.WeatherSerializer
+    serializer_class = WeatherSerializer
 
     def get(self, request, format=None):
         """Returns A set of instructions for this app"""
@@ -37,5 +35,3 @@ class WeatherAppView(APIView):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
-
-

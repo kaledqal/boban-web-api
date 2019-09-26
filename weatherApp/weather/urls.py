@@ -1,5 +1,7 @@
 from django.urls import path
-from weather import views
+from . import views
+
+app_name = 'weather'
 
 urlpatterns = [
     path('weather', views.WeatherAppView.as_view()),

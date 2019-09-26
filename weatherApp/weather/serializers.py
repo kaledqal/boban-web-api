@@ -1,4 +1,9 @@
-from abc import ABC
+"""
+Serializer module for the weather App
+"""
+
+
+__author__ = 'Kalenshi Katebe'
 
 from rest_framework import serializers
 

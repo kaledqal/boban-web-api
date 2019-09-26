@@ -30,6 +30,7 @@ class AdminSiteTests(TestCase):
         )
 
     def test_users_listed(self):
+        print("Hello world")
         """Tests that users are listed on our page"""
         url = reverse('admin:weather_user_changelist')
         resp = self.client.get(url)
